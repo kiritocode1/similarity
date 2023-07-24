@@ -3,7 +3,7 @@
 
 import { FC, FormEvent, useState } from 'react'
 import { toast } from '@/ui/toast';
-import { createApikey as cKey } from '@/helpers/create-api-key';
+import { createApikey  } from '@/helpers/create-api-key';
 import { Key } from 'lucide-react';
 import LargeHeading from '@/ui/LargeHeading';
 import Paragraph from '@/ui/paragraph';
@@ -20,7 +20,7 @@ const RequestApiKey: FC = () => {
     e.preventDefault(); 
     setIsCreating(true); 
     try {
-      const generatedApiKey = await cKey(); 
+      const generatedApiKey = await createApikey(); 
       setApiKey(generatedApiKey);
     } catch (error) {
       if (error instanceof Error) { 
@@ -67,7 +67,7 @@ const RequestApiKey: FC = () => {
 					<Input
 						readOnly
 						value={apiKey ?? ""}
-						placeholder="Request an API key to display here "
+						placeholder={`Request an API key to display here ${apiKey} `}
 					/>
         </div>
         <div className='mt-4 sm:ml-4 sm:flex-shrink-0 flex justify-center'>

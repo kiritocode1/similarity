@@ -1,4 +1,4 @@
-export function cosineSimilarity(A: number[], B: number[]){
+export function cosineSimilarity(A: number[], B: number[]) {
   var dotproduct = 0
   var mA = 0
   var mB = 0

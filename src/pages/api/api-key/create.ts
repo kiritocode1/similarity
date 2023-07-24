@@ -21,9 +21,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<CreateApiData>)
             where:{userId:user.id}
         })
         if (existingApiKey) {
-            return res.status(400).json({
-                error: "you already have a valid api key", 
-                createdApiKey:null
+            return res.status(200).json({
+                error: "you already have a valid api key .create.ts", 
+                createdApiKey:existingApiKey 
             })
         }
 

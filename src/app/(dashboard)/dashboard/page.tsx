@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
 	title: "Similarity | Dashboard",
-	description: "FOSS text similarity api ",
+	description: "FOSS text similarity api "
 };
 
 

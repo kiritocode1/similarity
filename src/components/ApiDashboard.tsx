@@ -33,7 +33,7 @@ const ApiDashboard = async () => {
     
   }))
   return <div className="container flex flex-col gap-6 ">
-
+    <img src={user.user.image!} alt="user face" width={100} height={100} className="rounded-full"/>
     <LargeHeading>Welcome back {user.user.name} !!</LargeHeading>
     <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start items-center">
       <Paragraph>
